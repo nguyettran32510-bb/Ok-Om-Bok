@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Hội Cúng Trăng (Oóc Om Bóc) & Đua Ghe Ngo Sóc Trăng</title>
+    <style>
+        /* Reset CSS cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcf8f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 1. PHẦN MỞ (HEADER & NAVIGATION) */
+        header {
+            background: linear-gradient(135deg, #8b0000, #b8860b);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* CONTAINER CHÍNH */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* 2. PHẦN THÂN (CONTENT) */
+        .section-title {
+            color: #8b0000;
+            border-bottom: 3px solid #b8860b;
+            padding-bottom: 8px;
+            margin: 40px 0 20px 0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #b8860b;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Khung hiển thị Media */
+        .media-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .media-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            max-height: 450px;
+            object-fit: cover;
+        }
+
+        .media-box iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Grid layout cho các mục nhiều ảnh */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        /* 3. PHẦN CUỐI TRANG (FOOTER) */
+        footer {
+            background-color: #2c1d11;
+            color: #f1f1f1;
+            padding: 40px 20px 20px 20px;
+            margin-top: 50px;
+            border-top: 4px solid #b8860b;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .author-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .author-list li {
+            padding: 4px 0;
+        }
+
+        .signature-box {
+            border: 1px dashed #ffd700;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .signature-box img {
+            max-width: 100%;
+            max-height: 120px;
+            filter: brightness(1.1);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. PHẦN MỞ: THANH TIÊU ĐỀ VÀ ĐỀ TÀI -->
+    <header>
+        <h1>Lễ Hội Cúng Trăng (Oóc Om Bóc)</h1>
+        <nav>
+            <ul>
+                <li><a href="#trang-chu">Trang Chủ</a></li>
+                <li><a href="#noi-dung">Nội Dung Lễ Hội</a></li>
+                <li><a href="#hinhanh">Hình Ảnh</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#tac-gia">Tác Giả</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="trang-chu">
+        
+        <!-- 2. PHẦN THÂN: NỘI DUNG CHÍNH -->
+        
+        <!-- NGUỒN GỐC -->
+        <h2 class="section-title" id="noi-dung">1. Nguồn Gốc Lễ Hội</h2>
+        <div class="card">
+            <p>Lễ hội Ok Om Bok bắt nguồn từ tín ngưỡng nông nghiệp cổ xưa của người Khmer là thờ Mặt Trăng. Theo tín ngưỡng của người Khmer, thần Mặt Trăng là vị thần cai quản thời tiết, nước và mùa màng. Lễ cúng nhằm bày tỏ lòng biết ơn đối với thần Mặt Trăng đã ban cho mưa thuận gió hòa, cây cối tốt tươi và mùa màng bội thu.</p>
+            <p style="margin-top: 10px;"><strong>Thời gian tổ chức:</strong> Lễ hội được tổ chức vào rằm tháng 10 âm lịch hàng năm.</p>
+        </div>
+
+        <!-- CÁC HOẠT ĐỘNG -->
+        <h2 class="section-title">2. Các Hoạt Động Trong Ngày Lễ</h2>
+        
+        <div class="card">
+            <h3>a) Nghi thức Cúng Trăng (Lễ chính)</h3>
+            <ul>
+                <li><strong>Thời gian, địa điểm:</strong> Diễn ra vào tối rằm tháng mười khi trăng tròn và sáng nhất.</li>
+                <li><strong>Mâm lễ vật:</strong> Gồm có cốm dẹp (đặc sản không thể thiếu), chuối, khoai môn, khoai mì, dừa tươi và các loại bánh trái khác.</li>
+                <li><strong>Nghi thức đút cốm dẹp:</strong> Một vị tạ lão (người lớn tuổi uy tín trong phum sóc) hoặc người có tuổi nhất trong nhà sẽ bốc một ít cốm dẹp đút vào miệng từng đứa trẻ, vừa đút vừa vỗ nhẹ vào lưng và hỏi về ước nguyện, hoài bão của chúng trong năm tới.</li>
+            </ul>
+
+            <!-- Hình ảnh Lễ hội cúng trăng -->
+            <div class="gallery-grid">
+                <div class="media-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9FdN3PsJdLRFIjBxZLpQYQxzD3Q-TPDImXih2-wC5sQ&s=10" alt="Lễ hội cúng trăng 1">
+                </div>
+                <div class="media-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrZcGTGXIMCfEggBNAjVF0EH-uaS6Rh-ZBwpT5OkNQTA&s=10" alt="Nghi thức cúng trăng 2">
+                </div>
+                <div class="media-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUAginNHvnIa9HUwtdKvP8dSaB1gqADXv67A33-rhlY3qv-zDhzXGO2TR&s=10" alt="Lễ cúng trăng 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>b) Hội Đua Ghe Ngo</h3>
+            <ul>
+                <li><strong>Chiếc ghe Ngo:</strong> Là vật báu thiêng liêng của mỗi ngôi chùa và phum sóc, được làm từ thân cây gỗ nguyên vẹn, dài từ 26 - 31 mét, mũi và lái cong vút, trang trí hoa văn rực rỡ mang biểu tượng các loài linh vật. Mỗi chiếc ghe quy tụ từ 50 - 60 tay bơi khỏe mạnh, cùng tranh tài trong sự cổ vũ reo hò vang dội của hàng ngàn người dân bên bờ sông.</li>
+                <li><strong>Bầu không khí:</strong> Hội đua ghe Ngo là một trong những hoạt động hoành tráng và được mong chờ nhất, các cuộc đua thường được diễn ra trong vòng 3 - 4 giờ đồng hồ trong tiếng reo hò, cổ vũ nhiệt tình của rất nhiều người xem hội và những pha rượt đuổi nghẹt thở, tạo nên bầu không khí lễ hội cuồng nhiệt.</li>
+            </ul>
+
+            <!-- Hình ảnh Hội đua ghe Ngo -->
+            <div class="gallery-grid">
+                <div class="media-box">
+                    <img src="https://images.hcmcpv.org.vn/res/news/2022/02/02-02-2022-le-hoi-dua-ghe-ngo-tinh-than-doan-ket-cong-dong-tao-thanh-suc-manh-vo-song-92950BFD-details.jpg?vs=02022022103519" alt="Đua ghe Ngo 1">
+                </div>
+                <div class="media-box">
+                    <img src="https://special.nhandan.vn/Ve-Soc-Trang-xem-dua-ghe-Ngo-vui-hoi-Ooc-om-boc/assets/AV1vUrFLoY/a-nh-2-3008x2000.jpg" alt="Đua ghe Ngo 2">
+                </div>
+                <div class="media-box">
+                    <img src="https://file3.qdnd.vn/data/images/0/2022/11/07/thuyan/2%201.jpg" alt="Đua ghe Ngo 3">
+                </div>
+                <div class="media-box">
+                    <img src="https://cdn.nhandan.vn/images/IvCZyovHroGqKo00FqhL-BQeF6q46Db2o08GiflpMsRmRc5B6yee4FtUpW2eHE6trrsH5Y4KEE-yCND176Hmfw/11111-6549.jpg.webp" alt="Đua ghe Ngo 4">
+                </div>
+                <div class="media-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXO1corRKfWzbbNLqXUPwgLrixdk71UqaFDAk6Y7mMKw&s=10" alt="Đua ghe Ngo 5">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>c) Thả Đèn Nước và Thả Đèn Trời</h3>
+            <ul>
+                <li><strong>Thả đèn nước:</strong> Những chiếc đèn làm bằng thân cây chuối, trang trí cầu kỳ như những ngôi đền nhỏ thắp nến lung linh được thả xuống dòng sông.</li>
+                <li><strong>Thả đèn gió:</strong> Những chiếc đèn gió khổng lồ làm bằng tre và giấy quyến được thả lên trời cao.</li>
+                <li><strong>Ý nghĩa:</strong> Gửi gắm ước nguyện về những điều tốt đẹp, xua tan những muộn phiền, xui rủi, tạ ơn và tiễn đưa thần Nước và thần Đất.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>d) Một số hoạt động khác</h3>
+            <p>Biểu diễn nhạc ngũ âm, múa Chhay-dăm, múa Rô-băm và các gian hàng ẩm thực hội chợ, quảng bá đặc sản truyền thống của người Khmer.</p>
+        </div>
+
+        <!-- ẨM THỰC -->
+        <h2 class="section-title">3. Ẩm Thực</h2>
+        <div class="card">
+            <h3>Lễ vật và món ăn truyền thống trong nghi thức cúng trăng:</h3>
+            <ul>
+                <li><strong>Cốm dẹp:</strong> Là linh hồn của lễ hội Oóc Om Bóc. Cốm được làm từ lúa nếp non rang rồi quết bằng tay cho dẹt, sau đó trộn cùng dừa nạo, đường cát và một chút nước dừa để tạo độ xốp, dẻo, thơm lừng.</li>
+                <li><strong>Trái cây và thức cúng khác:</strong> Gồm chuối xiêm (chuối sứ), dừa tươi, khoai lang, cùng các loại bánh kẹo truyền thống.</li>
+            </ul>
+
+            <h3>Các loại bánh dân gian và bánh truyền thống:</h3>
+            <ul>
+                <li><strong>Bánh thốt nốt:</strong> Làm từ bột gạo, đường thốt nốt và trái thốt nốt chín, gói trong lá chuối mang màu vàng ươm và vị ngọt thanh.</li>
+                <li><strong>Bánh gừng và Bánh ong:</strong> Những loại bánh truyền thống có hình dáng độc đáo, giòn ngọt, thường xuất hiện trong các dịp lễ lớn của người Khmer.</li>
+                <li><strong>Thức uống:</strong> Rượu thốt nốt có hương vị thơm nhẹ, cay nồng tự nhiên từ hoa thốt nốt lên men.</li>
+            </ul>
+
+            <!-- Hình ảnh Ẩm thực & Cốm dẹp -->
+            <div class="gallery-grid">
+                <div class="media-box">
+                    <img src="https://cdnphoto.dantri.com.vn/-eTZxTfld3rqr4J0PBjsqxJkj18=/2022/11/02/k3-1667395400887.jpg" alt="Mâm cúng ẩm thực">
+                </div>
+                <div class="media-box">
+                    <img src="https://angiang.gov.vn/sites/default/files/inline-images/0V1A0835.jpg" alt="Cốm dẹp 1">
+                </div>
+                <div class="media-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWj3p1UyBIdm-JU7q5zk_hH46k8LYGehS8LN1idf2YPpg1u4RGKMurb5BR&s=10" alt="Cốm dẹp 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- TRANG PHỤC TRUYỀN THỐNG -->
+        <h2 class="section-title">4. Trang Phục Truyền Thống</h2>
+        <div class="card">
+            <h3>Trang phục truyền thống của phụ nữ Khmer:</h3>
+            <ul>
+                <li><strong>Áo tầm vông (áo cổ bồng):</strong> Loại áo ôm sát cơ thể hoặc áo dài tay kín đáo, được may bằng chất liệu tơ lụa mềm mại.</li>
+                <li><strong>Xà rông:</strong> Mảnh vải thổ cẩm dài khoảng 3,5m và rộng khoảng 1m được quấn quanh nửa thân dưới, dệt thủ công với các hoa văn tinh xảo (thường nổi bật với họa tiết hình trái trám và các hình khối đối xứng).</li>
+                <li><strong>Khăn Sbay:</strong> Dải lụa vắt chéo qua vai một cách duyên dáng, tạo điểm nhấn trang nhã cho bộ trang phục.</li>
+                <li><strong>Trang sức:</strong> Thường kết hợp với vòng tay, kiềng cổ, hoa tai bằng vàng hoặc kim loại chạm trổ lấp lánh.</li>
+            </ul>
+
+            <h3>Trang phục truyền thống của nam giới Khmer:</h3>
+            <ul>
+                <li><strong>Đời thường / Diễn hành:</strong> Nam giới thường mặc áo bà ba hoặc áo sơ mi trắng đơn giản, kết hợp với xà rông quấn ngang hông.</li>
+                <li><strong>Dịp lễ trọng thể:</strong> Nam thanh niên khoác thêm áo dài cổ đứng truyền thống, thắt lưng có thêu hoa văn tỉ mỉ và kết hợp cùng khăn rằn (Kama) choàng cổ hoặc vắt vai.</li>
+            </ul>
+
+            <!-- Hình ảnh Trang phục truyền thống -->
+            <div class="gallery-grid">
+                <div class="media-box">
+                    <img src="https://file.hstatic.net/200000503583/file/trang-phuc-dan-toc-khmer-5_61c22c5721634235921698228db5f24a.jpg" alt="Trang phục Khmer 1">
+                </div>
+                <div class="media-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNtDb6oNDCQvqN35KZYu7WFfUoV1hPoiVXGLiIsBLHWfZD7r4zPIVfoec&s=10" alt="Trang phục Khmer 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- GIÁ TRỊ VĂN HÓA -->
+        <h2 class="section-title">5. Giá Trị Văn Hóa Và Ý Nghĩa</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Thắt chặt tình đoàn kết:</strong> Lễ hội là dịp để người dân trong các phum, sóc tụ họp, sinh hoạt văn hóa, gắn kết tình làng nghĩa xóm.</li>
+                <li><strong>Tinh thần thượng võ và kỷ cương:</strong> Hội đua ghe Ngo không chỉ là hoạt động thể thao náo nhiệt mà còn rèn luyện tính kỷ luật, sức mạnh tập thể và tinh thần thượng võ của thanh niên Khmer.</li>
+                <li><strong>Bảo tồn bản sắc văn hóa:</strong> Đây là dịp trình diễn các loại hình nghệ thuật truyền thống độc đáo như múa Rom-vong, múa Chhay-dăm, nhạc Ngũ âm, cùng ẩm thực đặc trưng (tiêu biểu là cốm dẹp).</li>
+            </ul>
+        </div>
+
+        <!-- TỔNG HỢP HÌNH ÁNH VÀ VIDEO -->
+        <h2 class="section-title" id="hinhanh">Thư Viện Hình Ảnh</h2>
+        <div class="card">
+            <p style="text-align: center; font-style: italic;">Toàn bộ hình ảnh về Lễ cúng trăng, Đua ghe Ngo, Ẩm thực và Trang phục truyền thống đã được tích hợp trực tiếp vào từng mục tương ứng ở trên.</p>
+        </div>
+
+        <h2 class="section-title" id="video">Thư Viện Video</h2>
+        <div class="card">
+            <div class="media-box">
+                <iframe src="https://www.youtube.com/embed/tSAfFuY-R8s" title="Video Lễ hội Đua Ghe Ngo Sóc Trăng" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. PHẦN CUỐI TRANG (FOOTER) -->
+    <footer id="tac-gia">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>Tác Giả</h3>
+                <ul class="author-list">
+                    <li>Thạch Nguyễn Phi Yến</li>
+                    <li>Nguyễn Nguyệt Trân</li>
+                    <li>Trần Triệu Nhã Trân</li>
+                    <li>Triệu Ngọc Tuyền</li>
+                    <li>Kim Bảo Trân</li>
+                    <li>Đoàn Trần Bảo Ngọc</li>
+                    <li>Trần Bá Bách</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ & Địa Chỉ</h3>
+                <p><strong>Địa chỉ:</strong> Số 01 Mạc Đĩnh Chi, Phường 4, TP. Sóc Trăng</p>
+                <p style="margin-top: 10px;"><strong>Số điện thoại:</strong> 0789573538</p>
+				<p style="margin-top: 5px;"><strong>Email:</strong> chimen357@gmail.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Chữ Ký Tác Giả</h3>
+                <div class="signature-box">
+                    <!-- Bạn thay chuki.jpg bằng đường dẫn ảnh chữ ký thật của nhóm nhé -->
+                    <img src="chuki.jpg.jpg" alt="Chữ ký tác giả" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <p style="display:none; font-style: italic; color: #ccc;"> chuki.jpg.jpg </p>
+                </div>
+            </div>
+
+        </div>
+<!-- CHÈN FORM LIÊN HỆ VÀO ĐÂY -->
+    <style>
+      .contact-section {
+        background: linear-gradient(135deg, #b85328 0%, #d97736 50%, #e08b47 100%);
+        color: #ffffff;
+        padding: 35px 20px;
+        font-family: Arial, sans-serif;
+        margin-bottom: 20px;
+        border-radius: 12px;
+      }
+      .contact-info {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+      }
+      .contact-card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 24px;
+        color: #333333;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #333333;
+      }
+      .form-group input, 
+      .form-group select, 
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #e2d3ca;
+        border-radius: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+        outline: none;
+      }
+      .form-group select {
+        background-color: #fcf8f5;
+        color: #555555;
+      }
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+      .btn-submit {
+        width: 100%;
+        background: linear-gradient(135deg, #c45b2c 0%, #d97736 100%);
+        color: #ffffff;
+        border: none;
+        padding: 14px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(184, 83, 40, 0.3);
+      }
+      .btn-submit:hover {
+        opacity: 0.92;
+      }
+    </style>
+
+    <div class="contact-section">
+      <div class="contact-info">
+        <p>... cần giải đáp thắc mắc hoặc có góp ý, hãy gửi lời nhắn cho chúng tôi.</p>
+      </div>
+      <div class="contact-card">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Chủ đề</label>
+            <select id="subject" name="subject">
+              <option value="">-- Chọn chủ đề --</option>
+              <option value="gop-y">Góp ý</option>
+              <option value="hoi-dap">Thắc mắc / Hỏi đáp</option>
+              <option value="khac">Khác</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Nội dung câu hỏi</label>
+            <textarea id="message" name="message" placeholder=""></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Gửi lời nhắn</button>
+        </form>
+      </div>
+    </div>
+    <!-- HẾT PHẦN CHÈN -->
+        <div class="copyright">
+            <p>&copy; Website giới thiệu Lễ Hội Cúng Trăng (Oóc Om Bóc) - Đua Ghe Ngo Sóc Trăng.</p>
+        </div>
+    </footer>
+</body>
+</html>
